@@ -106,7 +106,7 @@ let ``str calculator with jump instructions`` (instructions:string, input:int, e
 [<InlineData("3,21,1008,21,8,20,1005,20,22,107,8,21,20,1006,20,31,1106,0,36,98,0,0,1002,21,125,20,4,20,1105,1,46,104,999,1105,1,46,1101,1000,1,20,4,20,1105,1,46,98,99", 9, "\nOutputs: 1001")>]
 [<InlineData("3,21,1008,21,8,20,1005,20,22,107,8,21,20,1006,20,31,1106,0,36,98,0,0,1002,21,125,20,4,20,1105,1,46,104,999,1105,1,46,1101,1000,1,20,4,20,1105,1,46,98,99", 34567, "\nOutputs: 1001")>]
 let ``ACCEPTANCE TESTS: compute with all instructions`` (instructions:string, input:int, expectation:string) =
-    instructions |> compute 42 |> should endWith expectation
+    instructions |> compute input |> should endWith expectation
 
 
 
